@@ -1,0 +1,14 @@
+<div class="container">
+  <h1 class="text-center">Családfa</h1>
+  <app-family-search (searchEvent)="performSearch($event)"></app-family-search>
+  <app-family-table [dataSource]="filteredFamilyMembers" (modifyClick)="handleModifyClick($event)"></app-family-table>
+  <h2>Családtagok adatainak szerkesztése</h2>
+  <app-modify-family [familyMembers]="familyMembers"></app-modify-family>
+  <div *ngIf="noResults;">
+    <p>Nincs találat.</p>
+  </div>
+  
+  <footer class="mb-3">
+    <h3 class="text-center">Készítette: Paulusz Zsombor 2024.01.19</h3>
+  </footer>
+</div>
